@@ -36,6 +36,7 @@ h1 {
   color: whitesmoke;
 }
 
+
 @media (max-width: 740px) {
   .box {
     width: 48%;

@@ -6,19 +6,24 @@ var message =
 var words = message.split(' ');
 
 function countdown() {
-  var timeLeft = 5;
+  var timeLeft = 2;
 
   // TODO: Add a comment describing the functionality of the setInterval() method:
+  // calls the function at the specified interval - 1 second (or 1000 milliseconds) in this case
   var timeInterval = setInterval(function () {
     // TODO: Add comments describing the functionality of the `if` statement:
+    // if the timeleft is greater than 1
     if (timeLeft > 1) {
       timerEl.textContent = timeLeft + ' seconds remaining';
       timeLeft--;
     } // TODO: Add comments describing the functionality of the `else if` statement:
+    // if the time left is equal to 1
     else if (timeLeft === 1) {
       timerEl.textContent = timeLeft + ' second remaining';
       timeLeft--;
     } // TODO: Add comments describing the functionality of the `else` statement:
+    // else the time is less than or equal to 0 then it will clear the interval and call
+    // the display message function
     else {
       timerEl.textContent = '';
       clearInterval(timeInterval);
@@ -39,10 +44,14 @@ function displayMessage() {
       clearInterval(msgInterval);
     } else {
       // Display one word of the message
+      // console.log(words[wordCount]);
       mainEl.textContent = words[wordCount];
       wordCount++;
     }
-  }, 1000);
+  }, 400);
 }
 
+setTimeout(function(){
+  console.log("Surprise!");
+},2000);
 countdown();
