@@ -30,6 +30,7 @@ var handleFormSubmit = function(event) {
 formEl.on('submit', handleFormSubmit);
 
 // TODO: Add comments to describe the functionality of this jQuery UI interaction
+// creates a list of potential autocomplete options when filling in the input field with id skill-name
 $(function() {
   var skillNames = [
     'Bootstrap',
@@ -57,6 +58,7 @@ $(function() {
 });
 
 // TODO: Add comments to describe the functionality of this jQuery UI interaction
+// Opens a datepicker on the input id datapicker and setting the ability to change the month and year to true
 $(function() {
   $('#datepicker').datepicker({
     changeMonth: true,
@@ -65,6 +67,7 @@ $(function() {
 });
 
 // TODO: Add comments to describe the functionality of this jQuery UI interaction
+
 $(function() {
   $('#skills-list').sortable({
     placeholder: 'ui-state-highlight'
