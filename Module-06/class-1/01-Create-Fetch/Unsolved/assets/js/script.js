@@ -5,7 +5,7 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
   // TODO: Insert the API url to get a list of your repos
-  var requestUrl = '';
+  var requestUrl = 'https://api.github.com/users/cnohilly/repos';
 
   fetch(requestUrl)
     .then(function(response) {
