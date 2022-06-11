@@ -5,6 +5,7 @@ var limitWarningEl = document.querySelector('#limit-warning');
 var getRepoName = function () {
   // Where is this value coming from?
   // TODO: Write your answer here
+  // The portion of the current url location that is the question mark and onwards
   var queryString = document.location.search;
   var repoName = queryString.split('=')[1];
 
@@ -15,6 +16,7 @@ var getRepoName = function () {
   } else {
     // Under what condition will this run?
     // TODO: Write your answer here
+    // If a repository name or parameter is not supplied or is invalid
     document.location.replace('./index.html');
   }
 };
@@ -29,6 +31,7 @@ var getRepoIssues = function (repo) {
 
         // What is this checking for? Under what condition will this be `true`?
         // TODO: Write your answer here
+        console.log(response);
         if (response.headers.get('Link')) {
           displayWarning(repo);
         }
