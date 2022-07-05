@@ -24,6 +24,7 @@ const isPrime = num => {
 };
 
 // TODO: Describe how filter is working in this example. What will the value of primeArray be?
+
 const primeArray = originalArray.filter(isPrime);
 
 // TODO: Describe how filter is working in this example. What will the value of moreThan5Array be?
