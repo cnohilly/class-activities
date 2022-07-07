@@ -12,10 +12,11 @@ describe('Algo', () => {
     });
   });
 
-  describe('isPalindrome', () => {
-    it('should return true if a string is a palindrome', () => {
-      const str = 'racecar';
 
+
+  describe('isPalindrome', () => {
+
+    it('should return true if a string is a palindrome', () => { 
       const result = new Algo().isPalindrome(str);
 
       expect(result).toEqual(true);
