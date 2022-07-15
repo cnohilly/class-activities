@@ -1,7 +1,9 @@
 const Store = require('./store');
 const { toys } = require('./toy');
 
+// creating a new store using the toy array imported from the toy script
 const store = new Store("Big Al's Toy Barn", toys);
+
 
 store.welcome();
 store.processProductSale('Action Figure');

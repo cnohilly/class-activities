@@ -1,0 +1,28 @@
+{
+    "reviews": [
+        {
+            "product": "test",
+            "review": "test",
+            "username": "Test",
+            "review_id": "b2ef"
+        },
+        {
+            "product": "phone",
+            "review": "great",
+            "username": "cno",
+            "review_id": "0219"
+        },
+        {
+            "product": "computer",
+            "review": "better",
+            "username": "cnohi",
+            "review_id": "8e55"
+        },
+        {
+            "product": "tested",
+            "review": "g",
+            "username": "test2",
+            "review_id": "0bb6"
+        }
+    ]
+}

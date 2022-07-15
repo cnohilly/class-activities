@@ -12,6 +12,6 @@ const toys = [
 ];
 
 module.exports = {
-  Toy,
-  toys
+  Toy, // Toy object / class
+  toys // array of toys
 };
