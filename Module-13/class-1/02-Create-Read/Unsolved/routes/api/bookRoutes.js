@@ -2,24 +2,30 @@ const router = require('express').Router();
 const Book = require('../../models/Book');
 
 // TODO: Add a comment describing the purpose of this route
+// using express to creating a route to the homepage
 router.get('/', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+  // using sequelize to select all from the book table
   Book.findAll().then((bookData) => {
     res.json(bookData);
   });
 });
 
 // TODO: Add a comment describing the purpose of this route
+// using express to create a route to the paperbacks
 router.get('/paperbacks', (req, res) => {
   Book.findAll({
     // TODO: Add a comment describing the functionality of this property
+    // using sequelize to select all ordered by title
     order: ['title'],
     // TODO: Add a comment describing the functionality of this property
+    // where the book is a paperback
     where: {
       is_paperback: true
     },
     attributes: {
       // TODO: Add a comment describing the functionality of this property
+      // exclude is paperback and edition columns from the output
       exclude: ['is_paperback', 'edition']
     }
   }).then((bookData) => {
@@ -28,8 +34,10 @@ router.get('/paperbacks', (req, res) => {
 });
 
 // TODO: Add a comment describing the purpose of this route
+// using express to create a route to specify an id to get
 router.get('/:id', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+  // searching the table by a primary key
   Book.findByPk(req.params.id).then((bookData) => {
     res.json(bookData);
   });
