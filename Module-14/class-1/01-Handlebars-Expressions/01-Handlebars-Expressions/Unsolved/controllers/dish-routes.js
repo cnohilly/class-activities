@@ -1,3 +1,5 @@
+//const Dish = require('../models/Dish');
+
 const router = require('express').Router();
 
 // We are using hardcoded data here, where would our data usually come from? Remember - we haven't yet set up a database or Sequelize in our app.
@@ -39,6 +41,26 @@ const dishes = [
 // Get all dishes
 router.get('/', async (req, res) => {
   res.render('all');
+});
+
+router.get('/:num', async (req, res) => {
+  const index = req.params.num;
+  if (!dishes[index]) {
+    res.status(404).json({ message: 'No dish for this id.' });
+    return;
+  }
+  res.render('dish', dishes[req.params.num]);
+  // Dish.findOne({
+  //   where: {
+  //     id: req.params.num
+  //   }
+  // }).then(dishData => {
+  //   if(!dishData){
+  //     res.status(404).json({message: 'No dish for this id.'});
+  //     return;
+  //   }
+  //   res.render('dish',dishData);
+  // });
 });
 
 // TODO: Add a route called `/dish/:num` below
